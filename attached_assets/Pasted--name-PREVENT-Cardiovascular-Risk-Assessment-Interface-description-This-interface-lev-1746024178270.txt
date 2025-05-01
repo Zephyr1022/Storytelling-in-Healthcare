@@ -1,0 +1,28 @@
+{
+  "name": "PREVENT Cardiovascular Risk Assessment Interface",
+  "description": "This interface leverages the American Heart Association's PREVENTTM online calculator to estimate the 10-year and 30-year risk of cardiovascular disease (CVD), atherosclerotic cardiovascular disease (ASCVD), and heart failure (HF). It helps clinicians evaluate risk levels for primary prevention patients based on input parameters such as age, sex, cholesterol levels, blood pressure, BMI, eGFR, diabetes status, smoking habits, and medication use.",
+  "function_name": "calculate_prevent_risk",
+  "input_args": {
+    "age": "Patient's age (30-79 years).",
+    "sex": "Patient's biological sex (male/female).",
+    "total_cholesterol": "Total cholesterol level in mg/dL (130-320).",
+    "hdl_cholesterol": "HDL cholesterol level in mg/dL (20-100).",
+    "systolic_bp": "Systolic blood pressure in mmHg (90-200).",
+    "bmi": "Body Mass Index (BMI) value (18.5-39.9).",
+    "egfr": "Estimated glomerular filtration rate (eGFR) in mL/min/1.73m² (15-140).",
+    "diabetes_status": "Indicates whether the patient has diabetes (yes/no).",
+    "smoking_status": "Indicates whether the patient is a current smoker (yes/no).",
+    "antihypertensive_medication": "Indicates whether the patient uses anti-hypertensive medication (yes/no).",
+    "lipid_lowering_medication": "Indicates whether the patient uses lipid-lowering medication (yes/no).",
+    "uacr": "Urine albumin-to-creatinine ratio in mg/g (optional).",
+    "hba1c": "Hemoglobin A1C percentage (optional).",
+    "zip_code": "Patient's ZIP code to estimate the Social Deprivation Index (optional)."
+  },
+  "return": {
+    "cvd_risk": "Calculated 10-year and 30-year cardiovascular disease (CVD) risk as a percentage.",
+    "ascvd_risk": "Calculated 10-year and 30-year atherosclerotic cardiovascular disease (ASCVD) risk as a percentage.",
+    "hf_risk": "Calculated 10-year and 30-year heart failure (HF) risk as a percentage.",
+    "risk_categories": "Categorization of the 10-year risk levels into low (<5%), borderline (5%-7.4%), intermediate (7.5%-19.9%), and high (≥20%)."
+  },
+  "dependency": ["American Heart Association PREVENTTM Risk Models"]
+}
